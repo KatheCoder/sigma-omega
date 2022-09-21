@@ -1,0 +1,220 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+@import '~antd/dist/antd.css';
+
+.sector-color {
+    background: #5c5cff;
+    border-top: none!important;
+    color: #fffbdb;
+    text-align:center;
+}
+a{
+    color: #000000!important;
+}
+a:hover{
+    color: #716b6b !important;
+
+}
+
+.hide-by-default {
+    display: none;
+}
+
+.maleRating {
+    color: #000080!important;
+     padding-top: 16px!important;
+    margin: 0px;
+}
+.femaleRating {
+    color: #f400ff !important;
+    padding-top: 16px!important;
+    margin: 0px;
+
+}
+.login-container{
+    position: absolute;
+
+    //background-image: url('/images/login_bg.png');
+    height: 100%;
+    width: 100%;
+    //background-size: cover;
+    bottom: 0px;
+    margin: 0 auto;
+    background-position: 50%;
+}
+html, body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.form-signin {
+    max-width: 420px;
+    padding: 30px 38px 66px;
+    margin: 0 auto;
+    background-color: #eee;
+    //border: 3px dotted rgba(0,0,0,0.1);
+}
+
+.form-signin-heading {
+    text-align:center;
+    margin-bottom: 30px;
+    color: #000000 !important;
+
+}
+.form-control {
+    position: relative;
+    //font-size: 16px;
+    margin: 0 0 10px;
+    height: auto;
+    padding: 10px;
+}
+
+footer {
+    //margin: auto 0;
+
+    //position: relative;
+    left: 0;
+    bottom: 0;
+    height: 10%;
+    width: 100%;
+}
+.footer-img{
+    background: url("/images/main_client_logo.png");
+    background-size:5% auto;
+    background-repeat:no-repeat;
+    background-position: center;
+}
+.vertical-align {
+    letter-spacing: -4px;
+    font-size: 0;
+}
+
+.vertical-align .col-xs-4 {
+    vertical-align: middle;
+    display: inline-block;
+    letter-spacing: 0;
+    font-size: 14px;
+    float: none;
+}
+.heading-image-banner{
+    float:left;
+    width: 15%;
+    margin:0px 0 0 25%;
+}
+.content-heading h3{
+    margin-top: -3px;
+}
+.centerFlex {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+.pageFill{
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    //background: #000c17;
+}
+.card-c-b {
+    border: 6px solid #ff9900 !important;
+}
+.card-c-b-d{
+    color: #ffff!important;
+    background: orange!important;
+}
+.navbar-shadow {
+    -webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 8px 6px -6px #999;
+
+    /* the rest of your styling */
+}
+.bg-white{
+    background-color: #fffbdb;
+}
+//footer {
+//    float: right;
+//    height: 35px;
+//    margin: 0px 50px 0px 0px;
+//    background: #ffffff;
+//    color: #000;
+//    text-align: right;
+//    padding: 10px 30px;
+//    width: 180px;
+//}
+
+footer {
+        float: right;
+        text-align: right;
+
+    position: fixed;
+    padding: 10px 10px 0px 10px;
+    bottom: 0;
+    width: 100%;
+    /* Height of the footer*/
+    height: 60px;
+    //z-index: -99;
+    //background: grey;
+}
+body {
+    min-height: 100vh;
+    position: relative;
+    margin: 0;
+    padding-bottom: 100px; //height of the footer
+    box-sizing: border-box;
+}
+.splitdiv_right{
+    height:100%;
+    width:30%;
+}
+.splitdiv_left{
+    height:100%;
+    width:70%;
+}
+
+
+#leftdiv{
+    float:left;
+    background-color:#d45300;
+}
+#leftdivcard{
+    margin:0 auto;
+    width:70%;
+    background-color: #d45300;
+    margin-top: 49vh;
+    transform: translateY(-49%);
+    //box-shadow: 10px 10px 1px 0px rgba(78, 205, 196, .2);
+    //border-radius:10px
+}
+
+#rightdiv{
+    float:right;
+    background-color: #ffffff;
+}
+#rightdivcard{
+    margin:0 auto;
+    width:30%;
+    margin-top: 50vh;
+    transform: translateY(-50%);
+    //background-image: linear-gradient(to right, white 33%,  rgba(255,255,255,0) 0%);
+    //background-position: bottom;
+    //background-size: 20px 2px;
+    //background-repeat: repeat-x;
+}
+.body-style{
+    height:100%;
+    width:100%;
+    display:inline-block
+}
+.login-footer{
+
+        height: 110px!important;
+
+}
