@@ -106,6 +106,7 @@ function Profile({chartData, newdata,gps}) {
                 </Card>
             </div>
             <div style={{paddingTop: "5%"}}>
+
                 <GautengMap gpsdata={gps}/>
 
             </div>
