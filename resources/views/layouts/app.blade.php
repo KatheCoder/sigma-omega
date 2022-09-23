@@ -26,10 +26,11 @@
         <div id="leftdivcard">
             <div class="d-flex justify-content-center"  >
     <div class=" "  >
-        <strong><h2 style="font-weight: 900; margin-right: 0px!important;color:#ffffff;text-align: center">
-                Welcome to Frontier Technology Adoption Research Dashboard
+
+            <h2 style="font-weight: 900; margin-right: 0px!important;color:#ffffff;text-align: center">
+                <strong>Welcome to Innovation in Micro and Small Enterprises Research Dashboard</strong>
+
             </h2>
-        </strong>
     </div>
 </div>
 
