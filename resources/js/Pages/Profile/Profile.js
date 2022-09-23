@@ -22,18 +22,7 @@ function Profile({chartData, newdata,gps}) {
     return (
         <>
 
-            <Card
-                title={'Business registration'}
-                headStyle={{
-                    backgroundColor:"#d45300",
-                    color:"#ffffff"
-                }}
-                bodyStyle={{
-                    borderWidth:"2px",
-                    borderStyle:'solid',
-                    borderColor:"#d45300",
-                }}
-            >
+
                 <div className={'row'}>
                     <div className={'col-6'}>
 
@@ -54,11 +43,6 @@ function Profile({chartData, newdata,gps}) {
 
 
                 </div>
-
-
-            </Card>
-
-
 
 
             <div></div>
@@ -85,25 +69,14 @@ function Profile({chartData, newdata,gps}) {
             </div>
 
             <div style={{paddingTop: "5%"}}>
-                <Card
-                    title={'Firm Profile'}
-                    headStyle={{
-                        backgroundColor:"#d45300",
-                        color:"#ffffff"
-                    }}
-                    bodyStyle={{
-                        borderWidth:"2px",
-                        borderStyle:'solid',
-                        borderColor:"#d45300",
-                    }}
-                >
+
                 <BarChart
                     chartId={'customers'}
                     optionalltext={'Who are your customers '}
                     // province={province}
                     chartData={isChartData[0]}
                 />
-                </Card>
+
             </div>
             <div style={{paddingTop: "5%"}}>
 
