@@ -1,4 +1,4 @@
-import React, {useRef, useLayoutEffect} from 'react';
+import React, {useRef, useLayoutEffect,useEffect,useState} from 'react';
 import Layout from "../Layout";
 import Map from "../../components/Map";
 import GroupTable from "../../components/GroupTable";
@@ -7,7 +7,7 @@ import BarChart from "../../components/BarChart";
 
 
 
-const Achieved = ({chartData,Age}) => {
+const Achieved = ({chartData,manufacturing_table}) => {
 
     return (
         <Space
@@ -44,7 +44,7 @@ const Achieved = ({chartData,Age}) => {
 
                 <div className={'col-md-12'} style={{paddingTop: "5%"}}>
 
-                    <GroupTable chartData={chartData}/>
+                    <GroupTable chartData={manufacturing_table}/>
                 </div>
 
 
