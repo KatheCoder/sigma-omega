@@ -36481,14 +36481,8 @@ body {
 .login-footer {
   height: 110px !important;
 }
-
-
-
-
-
-
 .leaflet-container {
-    height: 600px;
-    width: 100%;
-    margin: 0 auto;
+    height: 600px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
 }
