@@ -52,7 +52,7 @@ function GautengMap({gpsdata}) {
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
                     <MarkerClusterGroup
-                        iconCreateFunction={createClusterCustomIcon}
+                        // iconCreateFunction={createClusterCustomIcon}
                     >
                         {listItems}
                     </MarkerClusterGroup>
