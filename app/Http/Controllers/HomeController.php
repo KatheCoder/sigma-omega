@@ -26,20 +26,14 @@ class HomeController extends Controller
      */
     public function index()
     {
-
         return Inertia::render('Main', ['page' => 'main menu']);
-
-     }
-
-
-
-    function doLogout()
-    {
-        Auth::logout(); // logging out user
-        return Inertia::location('/login');
     }
 
 
 
-
+    public function doLogout()
+    {
+        Auth::logout(); // logging out user
+        return Inertia::location('/login');
+    }
 }
