@@ -16,21 +16,20 @@ class CreateArchievedsTable extends Migration
         Schema::create('achieved', function (Blueprint $table) {
             $table->id();
             $table->string('SbjNum');
-            $table->string('Latitude');
-            $table->string('Longitude');
-            for ($i = 1; $i <=24 ;$i++){
+
+            for ($i = 1; $i <=24 ;$i++) {
                 $table->string('Q_H_O'.$i)->default(-1);
             }
             $table->string('Q13')->nullable();
-            for ($i = 1; $i <=7 ;$i++){
+            for ($i = 1; $i <=7 ;$i++) {
                 $table->string('Q22_O'.$i)->default(-1);
             }
-            for ($i = 1; $i <=4 ;$i++){
+            for ($i = 1; $i <=4 ;$i++) {
                 $table->string('T_Q40a_'.$i)->default(-1);
             }
             $table->string('Q64')->nullable();
 
-            for ($i = 1; $i <=4 ;$i++){
+            for ($i = 1; $i <=4 ;$i++) {
                 $table->string('Q64a_O'.$i)->default(-1);
             }
 
