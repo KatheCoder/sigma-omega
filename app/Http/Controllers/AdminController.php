@@ -13,7 +13,6 @@ use Maatwebsite\Excel\Excel;
 
 class AdminController extends Controller
 {
-
     public function index()
     {
         $tableStats = [];
@@ -22,32 +21,28 @@ class AdminController extends Controller
             ? array_push($tableStats, ['status' => true, 'title' => 'Achieved Sample', 'count' => ($dataSample)])
             : array_push($tableStats, ['status' => false, 'title' => 'Achieved Sample']);
 
-         if (in_array(Auth::user()->username,['developer','itayi'])){
-             return Inertia::render('Admin/admin', [
-                 'page' => 'admin',
-                 'stats' => $tableStats
-             ]);
-         }else{
-             return Inertia::render('Main');
-         }
-
-
+        if (in_array(Auth::user()->username, ['developer','itayi'])) {
+            return Inertia::render('Admin/admin', [
+                'page' => 'admin',
+                'stats' => $tableStats
+            ]);
+        } else {
+            return Inertia::render('Main');
+        }
     }
 
     public function fileImport(Request $request)
     {
-
         $table = 'achieved';
 
         $file = $request->file('records')->storeAs(
-            'private', $table . ".csv"
+            'private',
+            $table . ".csv"
         );
         Storage::delete(storage_path('private/' . $table . '.csv'));
         DB::table($table)->truncate();
         $cols = '
             SbjNum,
-            Latitude,
-            Longitude,
             Q_H_O1,
             Q_H_O2,
             Q_H_O3,
@@ -84,7 +79,6 @@ class AdminController extends Controller
             T_Q40a_2,
             T_Q40a_3,
             T_Q40a_4,
-            T_Q40a_4,
             Q64,
             Q64a_O1,
             Q64a_O2,
@@ -108,26 +102,17 @@ class AdminController extends Controller
         (
        " . $cols . "
         )";
-         DB::connection()->getpdo()->exec($query);
-//        (new ChartdataImport)->import('users.csv', null, \Maatwebsite\Excel\Excel::CSV);
-
-//        $import = Excel::import(new ChartdataImport,$file );
+        DB::connection()->getpdo()->exec($query);
         return back();
-//        return Inertia::render('Admin/admin',[
-//            'page' =>'admin'
-//        ]);
     }
 
     public function clearData(Request $request)
     {
+        $table = 'achieved';
 
-            $table = 'achieved';
-
-                Storage::delete(storage_path('private/' . $table . '.csv'));
-                DB::table($table)->truncate();
+        Storage::delete(storage_path('private/' . $table . '.csv'));
+        DB::table($table)->truncate();
 
         return back();
-
     }
-
 }
