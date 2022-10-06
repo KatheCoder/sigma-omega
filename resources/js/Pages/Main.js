@@ -1,11 +1,9 @@
 import React from 'react';
 import Layout from "./Layout";
 import {Link} from "@inertiajs/inertia-react";
-import {BsBank2, BsFillBarChartFill, BsUiChecks} from "react-icons/all";
-import {Avatar, Card, Space} from "antd";
-import Meta from "antd/es/card/Meta";
+import {BsBank2, BsFillBarChartFill, BsUiChecks} from "react-icons/bs";
+import { Card, Space} from "antd";
 import {usePage} from '@inertiajs/inertia-react'
-import GautengMap from "../components/GautengMap";
 
 const Main = () => {
     const {auth} = usePage().props

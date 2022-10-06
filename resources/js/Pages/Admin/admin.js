@@ -1,21 +1,17 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 import UploadFile from "./UploadFile";
 import {List, Tag, Button, Badge} from 'antd';
 import {Link, useForm} from '@inertiajs/inertia-react'
-import {Inertia} from '@inertiajs/inertia'
-import {BiArrowBack} from "react-icons/all";
+import {BiArrowBack} from "react-icons/bi";
 
 
-function Admin({stats, page}) {
-    const {data, setData, get, post, progress, processing} = useForm({
+function Admin({stats}) {
+    const {data, setData, post} = useForm({
         table: ''
     });
 
     const userClearData = () => {
-        post('/clearData', {
-            onSuccess: data => {
-            }
-        })
+        post('/clearData', { })
     }
 
 

@@ -1,31 +1,17 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import Layout from "../Layout";
-import Achieved from "../Sample/Achieved";
 import PieChart from "../../components/PieChart";
-import {Card, Rate, Space} from 'antd';
-import {FaMale, FaFemale} from 'react-icons/fa';
 import BarChart from "../../components/BarChart";
-import {AiFillCaretRight} from "react-icons/all";
-import {Inertia} from "@inertiajs/inertia";
 import GautengMap from "../../components/GautengMap";
 
 
 function Profile({chartData, newdata,gps}) {
      const [isChartData, setIsChartData] = useState(chartData);
 
-    useEffect(() => {
-
-
-    }, []);
-
-
     return (
         <>
-
-
-                <div className={'row'}>
+               <div className={'row'}>
                     <div className={'col-6'}>
-
                         <PieChart
                             chartId={'business-registration'}
                             chartData={isChartData}

@@ -1,20 +1,17 @@
-import React,{useEffect} from 'react';
+import React from 'react';
  import {Link, usePage} from '@inertiajs/inertia-react'
 import logo from '../images/client_1.png'
-import logoSig from '../images/logo-sig.png'
-import {BsBoxArrowInRight, BsMenuButton,BsUiChecks} from "react-icons/all";
+import {BsBoxArrowInRight, BsMenuButton,BsUiChecks} from "react-icons/bs";
 
 
 function Header(props) {
     const {url, component} = usePage()
 
-useEffect(()=>{
- },[])
     return (
         <nav className="navbar navbar-shadow bg-white sticky-top ">
             <div className="container-fluid">
                 <div className="navbar-header pull-left">
-                    <img src={logo} className="img-fluid" width="60" height="5"/>
+                    <img src={logo} className="img-fluid" alt="logo here" width="60" height="5"/>
                 </div>
 
 
