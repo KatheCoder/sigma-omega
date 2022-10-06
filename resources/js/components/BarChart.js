@@ -9,7 +9,7 @@ am4core.options.commercialLicense = true;
 am4core.useTheme(am4themes_animated);
 
 
-function BarChart({chartId, province, chartData, optionalltext}) {
+function BarChart({chartId, chartData, optionalltext}) {
 
     const chart = useRef(null);
 
@@ -57,30 +57,31 @@ function BarChart({chartId, province, chartData, optionalltext}) {
                 }
 
             ];
+
         }
         if (chartId == 'customers') {
             chart.data = [
                 {
                     "label": "Individuals",
-                    "value": chartData.Individuals
+                    "value": (chartData.Individuals /chartData.total )*100
                 }, {
                     "label": "Small businesses",
-                    "value": chartData.Small_businesses
+                    "value": (chartData.Small_businesses /chartData.total )*100
                 }, {
                     "label": "Medium businesses",
-                    "value": chartData.Medium_businesses
+                    "value": (chartData.Medium_businesses /chartData.total )*100
                 }, {
                     "label": "Large",
-                    "value": chartData.Large_businesses
+                    "value":( chartData.Large_businesses /chartData.total )*100
                 }, {
                     "label": "Government or public institution",
-                    "value": chartData.Public_institutions
+                    "value": (chartData.Public_institutions /chartData.total )*100
                 }, {
                     "label": "Other",
-                    "value": chartData.Other_Indi
+                    "value":( chartData.Other_Indi /chartData.total )*100
                 }, {
                     "label": "Don't know",
-                    "value": chartData.spontaneous
+                    "value": (chartData.spontaneous /chartData.total )*100
                 }
 
             ];
@@ -187,13 +188,14 @@ function BarChart({chartId, province, chartData, optionalltext}) {
         var labelBullet = series.bullets.push(new am4charts.LabelBullet());
         labelBullet.label.verticalCenter = "bottom";
         labelBullet.label.dy = 2;
-        if (chartId == 'customers' || chartId == 'sector' || chartId == 'firm'|| chartId == 'Age') {
+        if ( chartId == 'sector' || chartId == 'firm'|| chartId == 'Age') {
             labelBullet.label.text = "{values.valueY.workingValue.formatNumber('#.')}%";
-
-        } else {
+        }else if (chartId == 'customers'){
+            labelBullet.label.text = "{values.valueY.workingValue.formatNumber('#.00')}%";
+         }else if (chartId == 'contracts'){
+            labelBullet.label.text = "{values.valueY.workingValue.formatNumber('#.00')}";
+         }else {
             labelBullet.label.text = "{values.valueY.workingValue.formatNumber('#.')}";
-
-
         }
 
         let label = categoryAxis.renderer.labels.template;
