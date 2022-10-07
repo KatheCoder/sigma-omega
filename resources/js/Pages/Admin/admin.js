@@ -44,7 +44,7 @@ function Admin({stats}) {
                                             style={{backgroundColor: '#52c41a'}}
                                         />
 
-                                        <Tag color="green">Data loaded</Tag>
+                                        <Tag color="green">Rows of data loaded</Tag>
                                         <Button onClick={() => {
                                             setData('table', item.title)
                                         }
