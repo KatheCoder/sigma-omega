@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect,useState} from 'react';
 import Layout from "./Layout";
 import {Link} from "@inertiajs/inertia-react";
 import {BsBank2, BsFillBarChartFill, BsUiChecks} from "react-icons/bs";
@@ -71,7 +71,7 @@ const Main = () => {
                     </Link>
                     </div>
 
-                    {auth.user.name === "itayi" || auth.user.name === "developer" && (
+                    { (auth.user.name === "itayi" || auth.user.name === "developer") && (
                         <div className="col-4">
 
                         <Link href="/admin" title="admin">
