@@ -53,7 +53,7 @@ function BarChart({chartId, chartData, optionalltext}) {
                     "value": chartData.avg_people
                 }, {
                     "label": "Mean number of employees with contract",
-                    "value": 14
+                    "value": chartData.avg_contract_people
                 }
 
             ];

@@ -90,7 +90,8 @@ class AdminController extends Controller
             TotalQ40,
             FirmSize,
             Sector,
-            SampleType';
+            SampleType,
+            TotalQ40a';
 
         $dataFile = str_replace('\\', '/', (addslashes(base_path('storage/app/' . $file))));
         $dataFile = str_replace('//', '/', $dataFile);

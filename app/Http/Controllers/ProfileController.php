@@ -85,6 +85,7 @@ class ProfileController extends Controller
             DB::raw(' sum( ( CASE WHEN achieved.Q22_O7 = 6 THEN 1 ELSE 0 END  ) )  as improved_processes_7'),
             DB::raw(' sum( ( CASE WHEN achieved.Q22_O7 = 7 THEN 1 ELSE 0 END  ) )  as other_7'),
             DB::raw(' AVG( achieved.TotalQ40  ) as avg_people'),
+            DB::raw(' AVG( achieved.TotalQ40a  ) as avg_contract_people'),
             DB::raw(' sum( ( CASE WHEN achieved.Q13 = 1 THEN 1 ELSE 0 END  ) )  as Individuals'),
             DB::raw(' sum( ( CASE WHEN achieved.Q13 = 2 THEN 1 ELSE 0 END  ) )  as Small_businesses'),
             DB::raw(' sum( ( CASE WHEN achieved.Q13 = 3 THEN 1 ELSE 0 END  ) )  as Medium_businesses'),
