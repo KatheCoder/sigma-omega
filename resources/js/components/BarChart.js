@@ -170,6 +170,7 @@ function BarChart({chartId, chartData, optionalltext}) {
         valueAxis.renderer.ticks.template.disabled = true;
         valueAxis.renderer.baseGrid.disabled = true;
         valueAxis.renderer.grid.template.disabled = true;
+        valueAxis.min = 0;
 
 
         var series = chart.series.push(new am4charts.ColumnSeries());
